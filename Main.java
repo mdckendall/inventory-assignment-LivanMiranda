@@ -57,7 +57,7 @@ class Main {
           
       
         case 3:
-        System.out.println(" Enter the serial number of the item to change:");
+        System.out.println("Enter the serial number of the item to change:");
 					String st = scanner.next();
 					scanner.nextLine();
 					for (int i = 0; i < item.size(); i++) {

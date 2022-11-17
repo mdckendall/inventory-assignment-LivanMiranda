@@ -12,9 +12,6 @@ class Inventory {
 
   }
 
-  public String tostring(){
-    return name+","+ serialN+","+value;
-  }
 }
 
 class Main {
@@ -70,10 +67,11 @@ class Main {
       }
       if(options == 4){
         for(int i =0; i < item.size(); i++){
-          System.out.println(item.get(i).tostring());
+          System.out.println(item.get(i).name+","+item.get(i).serialN+","+item.get(i).serialN);
             
         }
       }
+     
     } while (options != 5);
   }
 }

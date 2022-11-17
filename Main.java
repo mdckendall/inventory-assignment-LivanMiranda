@@ -13,7 +13,7 @@ class Inventory {
   }
 
   public String tostring(){
-    return name+","+ serialN+","+ String.valueOf(value);
+    return name+","+ serialN+","+value;
   }
 }
 

@@ -77,7 +77,7 @@ class Main {
           
         case 4:
         for(Inventory Items : item){
-          System.out.print(Items);
+          System.out.println(Items);
             
         }
       break;

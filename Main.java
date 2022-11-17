@@ -12,29 +12,8 @@ class Inventory {
 
   }
 
-  public void setname(String name) {
-    this.name = name;
-
-  }
-
-  public void setvalue(int value) {
-    this.value = value;
-
-  }
-
-  public String getname() {
-    return this.name;
-  }
-
-  public String getserialN() {
-    return this.serialN;
-  }
-
-  public int getvalue() {
-    return this.value;
-  }
   public String tostring(){
-    return name + "," + serialN + ","+ String.valueOf(value);
+    return name+","+ serialN+","+ String.valueOf(value);
   }
 }
 
@@ -46,11 +25,11 @@ class Main {
     Inventory itemList;
     Scanner scanner = new Scanner(System.in);
     do {
-      System.out.println("Press 1 to add an item");
-      System.out.println("Press 2 to delete an item");
-      System.out.println("Press 3 to update an item");
-      System.out.println("Press 4 to show all the items");
-      System.out.println("Press 5 to quit the program");
+      System.out.println("Press 1 to add an item.");
+      System.out.println("Press 2 to delete an item.");
+      System.out.println("Press 3 to update an item.");
+      System.out.println("Press 4 to show all the items.");
+      System.out.println("Press 5 to quit the program.");
 
       options = scanner.nextInt();
       if (options == 1) {
@@ -79,13 +58,13 @@ class Main {
         System.out.println("Enter the serial number of the item to change:");
         serialN = scanner.next();
         for (int i = 0; i < item.size(); i++) {
-          if (item.get(i).getserialN().equals(serialN)) {
+          if (item.get(i).serialN.equals(serialN)) {
             System.out.println("Enter the new name:");
             name = scanner.next();
-            item.get(i).setname(name);
+            item.get(i).name = name;
             System.out.println("Enter the new value in dollars (whole numbers):");
             value = scanner.nextInt();
-            item.get(i).setvalue(value);
+            item.get(i).value = value;
           }
         }
       }

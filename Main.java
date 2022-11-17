@@ -31,22 +31,22 @@ class Main {
       System.out.println("Press 4 to show all the items.");
       System.out.println("Press 5 to quit the program.");
 
-      options = scanner.nextInt();
+      options = Integer.parseInt(scanner.nextLine()) ;
       if (options == 1) {
         System.out.println("Enter the name:");
-        name = scanner.next();
+        name = scanner.nextLine();
 
         System.out.println("Enter serial number:");
-        serialN = scanner.next();
+        serialN = scanner.nextLine();
 
         System.out.println("Enter the value in dollars (whole number):");
-        value = scanner.nextInt();
+        value = Integer.parseInt(scanner.nextLine());
         itemList = new Inventory(name, serialN, value);
         item.add(itemList);
       }
       if (options == 2) {
         System.out.println("Enter the serial number of the item to delete:");
-        serialN = scanner.next();
+        serialN = scanner.nextLine();
 
         for (int i = 0; i < item.size(); i++) {
           if (item.get(i).serialN.equals(serialN)) {
@@ -56,14 +56,14 @@ class Main {
       }
       if (options == 3) {
         System.out.println("Enter the serial number of the item to change:");
-        serialN = scanner.next();
+        serialN = scanner.nextLine();
         for (int i = 0; i < item.size(); i++) {
           if (item.get(i).serialN.equals(serialN)) {
             System.out.println("Enter the new name:");
-            name = scanner.next();
+            name = scanner.nextLine();
             item.get(i).name = name;
             System.out.println("Enter the new value in dollars (whole numbers):");
-            value = scanner.nextInt();
+            value = Integer.parseInt(scanner.nextLine());
             item.get(i).value = value;
           }
         }

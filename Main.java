@@ -61,18 +61,18 @@ class Main {
       
         case 3:
         System.out.println("Enter the serial number of the item to change:");
-        String update = scanner.nextLine();
-        for (int i = 0; i < item.size(); i++) {
-          if (item.get(i).serialN.equals(update)) {
-            System.out.println("Enter the new name:");
-            name = scanner.nextLine();
-            item.get(i).name = name;
-            System.out.println("Enter the new value in dollars (whole number):");
-            value = scanner.nextInt();
-            scanner.nextLine();
-            item.get(i).value = value;
-          }
+					String st = scanner.next();
+					scanner.nextLine();
+					for (int i = 0; i < item.size(); i++) {
+						if (item.get(i).serialN.equals(st)) {
+							System.out.println("Enter the new name:");
+							String na = scanner.nextLine();
+							System.out.println("Enter the new value in dollars (whole number):");
+							String va = scanner.next();
+							item.get(i).name = na;
+							item.get(i).value = Integer.parseInt(va);
         }
+          }
       break;
           
         case 4:
@@ -88,6 +88,6 @@ class Main {
 					break;
       }
     } while (options != 5);
-    
+  
   }
 }

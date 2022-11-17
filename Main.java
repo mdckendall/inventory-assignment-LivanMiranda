@@ -28,8 +28,8 @@ class Main {
       System.out.println("Press 4 to show all the items.");
       System.out.println("Press 5 to quit the program.");
 
-      options = scanner.nextInt();
-      scanner.nextLine();
+      options = Integer.parseInt(scanner.nextLine());;
+      
       switch(options){
         case 1:
         System.out.println("Enter the name:");
@@ -65,7 +65,7 @@ class Main {
 							System.out.println("Enter the new name:");
 							String na = scanner.nextLine();
 							System.out.println("Enter the new value in dollars (whole number):");
-							String va = scanner.next();
+							String va = scanner.nextLine();
 							item.get(i).name = na;
 							item.get(i).value = Integer.parseInt(va);
         }
@@ -74,7 +74,7 @@ class Main {
           
           case 4:
            for (int i = 0 ; i < item.size(); i++ ){
-               System.out.print("" +item.get(i).name + ",");
+               System.out.print(item.get(i).name + ",");
                System.out.print(item.get(i).serialN + ",");
                System.out.println(item.get(i).value);
             

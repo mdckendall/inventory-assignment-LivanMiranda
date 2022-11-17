@@ -11,7 +11,9 @@ class Inventory {
     this.value = value;
 
   }
-
+public String toString() {
+		return name + "," + serialN + "," + value;
+	}
 }
 
 class Main {
@@ -71,8 +73,8 @@ class Main {
       break;
           
         case 4:
-        for(int i =0; i < item.size(); i++){
-          System.out.println(item.get(i).name+","+item.get(i).serialN+","+item.get(i).value);
+        for(Inventory Items : item){
+          System.out.println(Items);
             
         }
       break;

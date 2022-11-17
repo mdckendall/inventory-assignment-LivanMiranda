@@ -29,7 +29,8 @@ class Main {
       System.out.println("Press 5 to quit the program.");
 
       options = Integer.parseInt(scanner.nextLine()) ;
-      if (options == 1) {
+      switch(options){
+        case 1:
         System.out.println("Enter the name:");
         name = scanner.nextLine();
 
@@ -40,8 +41,9 @@ class Main {
         value = Integer.parseInt(scanner.nextLine());
         itemList = new Inventory(name, serialN, value);
         item.add(itemList);
-      }
-      if (options == 2) {
+      break;
+          
+      case 2:
         System.out.println("Enter the serial number of the item to delete:");
         serialN = scanner.nextLine();
 
@@ -50,8 +52,10 @@ class Main {
             item.remove(i);
           }
         }
-      }
-      if (options == 3) {
+          break;
+          
+      
+        case 3:
         System.out.println("Enter the serial number of the item to change:");
         serialN = scanner.nextLine();
         for (int i = 0; i < item.size(); i++) {
@@ -64,14 +68,15 @@ class Main {
             item.get(i).value = value;
           }
         }
-      }
-      if(options == 4){
+      break;
+          
+        case 4:
         for(int i =0; i < item.size(); i++){
-          System.out.println(item.get(i).name+","+item.get(i).serialN+","+item.get(i).serialN);
+          System.out.println(item.get(i).name+","+item.get(i).serialN+","+item.get(i).value);
             
         }
+      break;
       }
-     
     } while (options != 5);
   }
 }

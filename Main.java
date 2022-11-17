@@ -62,7 +62,7 @@ class Main {
             System.out.println("Enter the new name:");
             name = scanner.nextLine();
             item.get(i).name = name;
-            System.out.println("Enter the new value in dollars (whole numbers):");
+            System.out.println("Enter the new value in dollars (whole number):");
             value = Integer.parseInt(scanner.nextLine());
             item.get(i).value = value;
           }

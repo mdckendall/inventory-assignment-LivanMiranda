@@ -18,7 +18,7 @@ public String toString() {
 
 class Main {
   public static void main(String[] args) {
-    int options = 0, value;
+    int options, value;
     String name, serialN;
     ArrayList<Inventory> item = new ArrayList<Inventory>();
     Inventory itemList;
@@ -31,7 +31,8 @@ class Main {
       System.out.println("Press 4 to show all the items.");
       System.out.println("Press 5 to quit the program.");
 
-      options = Integer.parseInt(scanner.nextLine()) ;
+      options = scanner.nextInt();
+      scanner.nextLine();
       switch(options){
         case 1:
         System.out.println("Enter the name:");
@@ -67,7 +68,8 @@ class Main {
             name = scanner.nextLine();
             item.get(i).name = name;
             System.out.println("Enter the new value in dollars (whole number):");
-            value = Integer.parseInt(scanner.nextLine());
+            value = scanner.nextInt();
+            scanner.nextLine();
             item.get(i).value = value;
           }
         }
@@ -86,5 +88,6 @@ class Main {
 					break;
       }
     } while (options != 5);
+    
   }
 }

@@ -74,7 +74,7 @@ class Main {
           
           case 4:
            for (int i = 0 ; i < item.size(); i++ ){
-               System.out.print(" " +item.get(i).name + ",");
+               System.out.print("" +item.get(i).name + ",");
                System.out.print(item.get(i).serialN + ",");
                System.out.println(item.get(i).value);
             

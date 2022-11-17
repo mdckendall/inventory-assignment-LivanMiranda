@@ -57,9 +57,9 @@ class Main {
       
         case 3:
         System.out.println("Enter the serial number of the item to change:");
-        serialN = scanner.nextLine();
+        String update = scanner.nextLine();
         for (int i = 0; i < item.size(); i++) {
-          if (item.get(i).serialN.equals(serialN)) {
+          if (item.get(i).serialN.equals(update)) {
             System.out.println("Enter the new name:");
             name = scanner.nextLine();
             item.get(i).name = name;

@@ -23,6 +23,7 @@ class Main {
     ArrayList<Inventory> item = new ArrayList<Inventory>();
     Inventory itemList;
     Scanner scanner = new Scanner(System.in);
+    
     do {
       System.out.println("Press 1 to add an item.");
       System.out.println("Press 2 to delete an item.");
@@ -78,6 +79,11 @@ class Main {
             
         }
       break;
+          case 5:
+					break;
+
+				default:
+					break;
       }
     } while (options != 5);
   }
